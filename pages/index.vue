@@ -1,23 +1,14 @@
 <template>
-  <HeroSection />
   <section class="mt-8">
-    <h2 class="text-2xl font-bold mb-4">Latest Podcast Episodes</h2>
-    <!-- PodcastEpisodesList component goes here -->
-  </section>
-  <section class="mt-8">
-    <h2 class="text-2xl font-bold mb-4">Upcoming Races</h2>
-    <!-- UpcomingRacesList component goes here -->
-  </section>
-  <section class="mt-8 mb-10">
-    <h2 class="text-2xl font-bold mb-4">Latest Results</h2>
-    <!-- LatestResultsList component goes here -->
+    <h2 class="text-2xl font-bold mb-4">Senaste poddavsitt & artiklar</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <PodcastEpisodeCard />
+      <PodcastEpisodeCard />
+      <PodcastEpisodeCard />
+    </div>
   </section>
 </template>
 
 <script setup>
-import HeroSection from "@/components/HeroSection.vue";
+import PodcastEpisodeCard from "@/components/PodcastEpisodeCard.vue";
 </script>
-
-<style>
-/* Add page-specific styles here */
-</style>
