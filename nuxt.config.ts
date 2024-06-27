@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/image",
     "@nuxt/ui",
+    "@nuxtjs/google-fonts",
   ],
   tailwindcss: {
     exposeConfig: true,
