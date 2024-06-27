@@ -9,9 +9,13 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
+    "@nuxt/kit": "^3.12.2",
+    "@nuxt/schema": "^3.12.2",
+    "@nuxt/typescript-build": "^3.0.2",
     "@nuxt/ui": "^2.14.2",
     "@nuxtjs/proxy": "^2.1.0",
     "@sanity/block-content-to-html": "^2.0.0",
@@ -21,9 +25,8 @@
     "jsdom": "^24.1.0",
     "mariadb": "^3.3.0",
     "node-fetch": "^3.3.2",
-    "nuxt": "^3.11.0",
+    "nuxt": "^3.12.2",
     "puppeteer": "^22.10.0",
-    "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "xlsx": "^0.18.5"
   },
@@ -44,7 +47,8 @@
     "eslint": "^8.57.0",
     "nuxt-icon": "^0.6.10",
     "pinia": "^2.1.7",
-    "typescript": "^5.4.2",
-    "vue-tsc": "^1.8.27"
+    "typescript": "^5.5.2",
+    "vue": "^3.4.30",
+    "vue-tsc": "^2.0.22"
   }
 }
