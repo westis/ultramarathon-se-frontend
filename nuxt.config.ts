@@ -5,26 +5,24 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   modules: [
-    // "@nuxtjs/tailwindcss",
+    "@nuxtjs/tailwindcss",
     "@nuxtjs/sanity",
     "@pinia/nuxt",
-    // "@nuxtjs/eslint-module",
     "@nuxt/image",
-    // "@nuxtjs/color-mode",
     "@nuxt/ui",
-    // "nuxt-icon",
-    // "@nuxtjs/google-fonts",
-    // "@nuxtjs/i18n",
-    // "@nuxtjs/sitemap",
   ],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
-    // and more...
   },
   colorMode: {
-    preference: "system", // default value of $colorMode.preference
-    fallback: "light", // fallback value if not system preference found
+    preference: "system",
+    fallback: "light",
     classSuffix: "",
+  },
+  css: ["~/assets/css/tailwind.css"],
+  sanity: {
+    projectId: process.env.SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET,
   },
 });

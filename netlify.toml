@@ -3,4 +3,6 @@
   command = "npm install && npm run build"
 
 [build.environment]
-  NUXT_ENV_API_URL = "https://main--ultramarathonse-cms.netlify.app"  # or the appropriate API URL
+  NUXT_ENV_API_URL = "https://main--ultramarathonse-cms.netlify.app"
+  SANITY_PROJECT_ID = "w4mxvbu4"
+  SANITY_DATASET = "production"
