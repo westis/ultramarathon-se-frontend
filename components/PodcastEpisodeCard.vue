@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-white shadow rounded-lg overflow-hidden">
+  <div class="bg-white shadow rounded-lg overflow-hidden mb-4">
     <div class="p-4">
-      <h3 class="text-lg text-black font-semibold">Podcast Title</h3>
+      <h3 class="text-lg font-semibold text-black">Podcast Episode Title</h3>
       <p class="text-gray-600">Description of the podcast episode.</p>
     </div>
     <div class="p-4 bg-gray-50">
-      <a href="#" class="text-primary-500 hover:text-primary-700">Lyssna ></a>
+      <a href="#" class="text-primary-500 hover:text-primary-700">Listen ></a>
     </div>
   </div>
 </template>

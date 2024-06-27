@@ -13,9 +13,11 @@
               Succé i Sydafrika, banrekord av Rabe, 16-årig Rapp sprang långt
               och ingen mer backyard av Sweden Runners
             </h1>
-            <div class="flex justify-between items-center mt-2">
+            <div class="flex justify-between items-center mt-1">
               <p class="text-sm lg:text-base">ULTRAAKTUELLT / 2024-06-27</p>
-              <button class="btn bg-primary-500 text-white">Lyssna</button>
+              <button class="btn btn-lg bg-primary-500 text-white">
+                Lyssna
+              </button>
             </div>
           </div>
         </div>
@@ -51,6 +53,4 @@
 // Add any necessary setup code here
 </script>
 
-<style scoped>
-/* Add component-specific styles if needed */
-</style>
+<style scoped></style>

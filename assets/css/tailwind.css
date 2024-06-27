@@ -6,3 +6,8 @@
 .btn {
   @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider;
 }
+
+/* Custom larger button styles */
+.btn-lg {
+  @apply py-3 px-6 text-base;
+}

@@ -1,37 +1,35 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <div class="w-full mx-auto">
+    <div
+      class="w-full mx-auto px-4 sm:px-6 lg:px-8"
+      style="width: min(100% - 2rem, 1440px)"
+    >
       <Navbar />
     </div>
-    <main class="flex-grow container mt-6 mx-auto px-4 sm:px-6 lg:px-8">
+    <main
+      class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8"
+      style="width: min(100% - 2rem, 1440px)"
+    >
       <HeroSection />
       <div class="flex flex-wrap mt-8">
         <div class="w-full lg:w-3/4 pr-4">
-          <section class="mt-8">
-            <h2 class="text-2xl font-bold mb-4">
-              Senaste poddavsitt & artiklar
-            </h2>
+          <section class="mt-0">
+            <h2 class="text-2xl font-bold mb-4">Senaste artiklar</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <PodcastEpisodeCard />
-              <PodcastEpisodeCard />
-              <PodcastEpisodeCard />
-              <PodcastEpisodeCard />
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
             </div>
           </section>
         </div>
         <aside class="w-full lg:w-1/4 pl-4">
           <!-- Sidebar content -->
-          <div class="mb-4 bg-white shadow-lg p-4">
-            <h2 class="text-xl font-bold text-black">Verktyg</h2>
-            <p>Verktyg för både löpare och arrangörer.</p>
-            <button class="mt-2 btn bg-primary-500 text-white">
-              Till verktyg
-            </button>
-          </div>
           <div class="bg-white shadow-lg p-4">
-            <h2 class="text-xl font-bold text-black">Något annat</h2>
-            <p>Verktyg för både löpare och arrangörer.</p>
-            <button class="mt-2 btn bg-primary-500 text-white">Läs mer</button>
+            <h2 class="text-xl font-bold text-black">Senaste poddavsnitt</h2>
+            <PodcastEpisodeCard />
+            <PodcastEpisodeCard />
+            <PodcastEpisodeCard />
           </div>
         </aside>
       </div>
@@ -45,6 +43,7 @@ import { ref } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import Footer from "~/components/Footer.vue";
 import HeroSection from "@/components/HeroSection.vue";
+import ArticleCard from "@/components/ArticleCard.vue";
 import PodcastEpisodeCard from "@/components/PodcastEpisodeCard.vue";
 
 // Mock data for demonstration purposes
