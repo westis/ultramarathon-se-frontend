@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: "class", // Enable dark mode
+  darkMode: "class",
   content: ["./src/**/*.{html,js,ts,vue}"],
   theme: {
     extend: {
@@ -41,6 +41,10 @@ export default {
             900: "#0c1508",
           },
         },
+      },
+      maxWidth: {
+        none: "none",
+        custom: "min(100% - 2rem, 1440px)", // Custom max-width
       },
     },
   },

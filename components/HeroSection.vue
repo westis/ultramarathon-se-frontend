@@ -1,6 +1,8 @@
 <template>
-  <div class="relative flex w-full overflow-hidden text-white mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+  <div
+    class="relative flex w-full overflow-hidden text-white custom-width mx-auto"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1 w-full">
       <div class="relative col-span-2">
         <img
           src="/images/hero-image.jpg"
@@ -26,10 +28,10 @@
       </div>
       <div class="flex flex-col justify-between">
         <div
-          class="p-4 bg-ultra-secondary-200 dark:bg-ultra-secondary-800 text-black dark:text-white text-base xl:text-lg mb-2 ml-4 flex-grow"
+          class="p-4 bg-ultra-secondary-200 dark:bg-ultra-secondary-800 text-black dark:text-white text-base md:text-sm lg:text-base xl:text-lg mb-2 ml-4 flex-grow"
         >
           <h2
-            class="text-xl xl:text-2xl font-bold text-ultra-secondary-800 dark:text-ultra-secondary-200"
+            class="text-xl md:text-lg lg:text-xl xl:text-2xl font-bold text-ultra-secondary-800 dark:text-ultra-secondary-200"
           >
             Kommande ultratävlingar
           </h2>
@@ -42,11 +44,11 @@
           </ul>
         </div>
         <div
-          class="p-4 bg-ultra-tertiary-200 dark:bg-ultra-tertiary-800 text-black dark:text-white text-base xl:text-lg mt-2 ml-4 flex-grow flex flex-col justify-between"
+          class="p-4 bg-ultra-tertiary-200 dark:bg-ultra-tertiary-800 text-black dark:text-white text-base md:text-sm lg:text-base xl:text-lg mt-2 ml-4 flex-grow flex flex-col justify-between"
         >
           <div>
             <h2
-              class="text-xl xl:text-2xl font-bold text-ultra-tertiary-800 dark:text-ultra-tertiary-200"
+              class="text-xl md:text-lg lg:text-xl xl:text-2xl font-bold text-ultra-tertiary-800 dark:text-ultra-tertiary-200"
             >
               Resultat & statistik
             </h2>

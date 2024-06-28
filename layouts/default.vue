@@ -4,11 +4,11 @@
       <Navbar />
     </div>
     <main
-      class="flex-grow container mx-auto mt-4 px-4 sm:px-6 lg:px-8 text-ultra-primary-900 dark:text-ultra-primary-100"
+      class="flex-grow max-w-custom mx-auto mt-4 px-1 text-ultra-primary-900 dark:text-ultra-primary-100"
     >
       <HeroSection />
       <div class="flex flex-wrap mt-8">
-        <div class="w-full lg:w-3/4 pr-4">
+        <div class="w-full lg:w-3/4 pr-0 lg:pr-4">
           <section class="mt-0">
             <header class="">
               <h2
@@ -42,7 +42,7 @@
         </aside>
       </div>
     </main>
-    <Footer />
+    <Footer class="w-full custom-width mx-auto" />
   </div>
 </template>
 
