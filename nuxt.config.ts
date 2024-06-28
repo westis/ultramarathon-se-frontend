@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/tailwind.css"],
   sanity: {
-    projectId: process.env.SANITY_PROJECT_ID,
-    dataset: process.env.SANITY_DATASET,
+    projectId: process.env.SANITY_PROJECT_ID || "w4mxvbu4",
+    dataset: process.env.SANITY_DATASET || "production",
   },
 });
