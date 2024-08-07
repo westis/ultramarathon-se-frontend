@@ -76,7 +76,7 @@ const getResults = async () => {
     }
 
     const [_, eventId, distanceId] = eventIdMatch;
-    const apiUrl = `/api/raceid?distanceId=${distanceId}`;
+    const apiUrl = `/api/raceid?distanceId=${distanceId}&type=results`;
 
     loading.value = true;
 
@@ -108,8 +108,7 @@ const downloadExcel = () => {
     Rank: racer.place,
     Bib: racer.racer.bib_number,
     RacerID: racer.racer.id,
-    Name: racer.racer.full_name,
-    Gender: racer.racer.gender,
+    Sex: racer.racer.gender,
     Club: racer.racer.union,
     Brutto: msToHMS(racer.time_result_ms), // Ensure time_result_ms is correctly referenced
     DOB: racer.racer.details.birthday,

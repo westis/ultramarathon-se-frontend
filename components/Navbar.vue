@@ -11,36 +11,8 @@
             class="h-16 mr-2"
           />
         </a>
-        <div class="flex items-center gap-4">
-          <div
-            v-for="item in navigationItems"
-            :key="item._id"
-            class="relative group"
-          >
-            <a
-              :href="`/${item.slug.current}`"
-              class="hover:underline text-sm lg:text-lg text-ultra-primary-100"
-            >
-              {{ item.title }}
-            </a>
-            <div
-              v-if="item.children?.length"
-              class="absolute left-0 hidden group-hover:block bg-ultra-primary-800"
-            >
-              <ul>
-                <li v-for="child in item.children" :key="child._id">
-                  <a
-                    :href="`/${child.slug.current}`"
-                    class="block px-4 py-2 hover:bg-ultra-primary-700"
-                  >
-                    {{ child.title }}
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <ThemeSwitcher />
+        <!-- Pass the navigationItems to MegaMenu -->
+        <MegaMenu :navigation-items="navigationItems" />
         <!-- Mobile Menu Button -->
         <button @click="toggleMobileMenu" class="lg:hidden">
           <!-- Hamburger icon here -->
@@ -50,19 +22,11 @@
     <!-- Mobile Menu -->
     <div v-if="mobileMenuOpen" class="lg:hidden">
       <ul>
-        <li v-for="item in navigationItems" :key="item._id">
-          <a @click="toggleSubMenu(item)" class="block px-4 py-2">
-            {{ item.title }}
-            <span v-if="item.children?.length">▼</span>
-          </a>
-          <ul v-if="item.open" class="pl-4">
-            <li v-for="child in item.children" :key="child._id">
-              <a :href="`/${child.slug.current}`" class="block px-4 py-2">
-                {{ child.title }}
-              </a>
-            </li>
-          </ul>
-        </li>
+        <MenuItem
+          v-for="item in navigationItems"
+          :key="item.slug"
+          :item="item"
+        />
       </ul>
     </div>
   </nav>
@@ -71,16 +35,14 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { useNavigation } from "~/composables/useNavigation";
+import MegaMenu from "~/components/MegaMenu.vue";
+import MenuItem from "~/components/MenuItem.vue";
 
 const { navigationItems } = useNavigation();
 const mobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
-};
-
-const toggleSubMenu = (item: any) => {
-  item.open = !item.open;
 };
 </script>
 

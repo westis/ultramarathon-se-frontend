@@ -1,4 +1,4 @@
-// file path: frontend/server/api/itra-events.ts
+// file path: frontend/server/api/utmb-events.ts
 
 import { defineEventHandler } from "h3";
 

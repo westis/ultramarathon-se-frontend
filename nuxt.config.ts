@@ -27,4 +27,10 @@ export default defineNuxtConfig({
     projectId: process.env.SANITY_PROJECT_ID || "w4mxvbu4",
     dataset: process.env.SANITY_DATASET || "production",
   },
+  build: {
+    analyze: true,
+  },
+  render: {
+    resourceHints: true,
+  },
 });
